@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="location_2_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="現在位置の表示画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ls5-HH-wtQ">
+                                <rect key="frame" x="63" y="187" width="156" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wX6-e7-jdf">
+                                <rect key="frame" x="154" y="654" width="153" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="現在位置を取得する"/>
+                                <connections>
+                                    <action selector="getCurrentLocationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P2a-nW-Gv0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyb-Jk-TNu">
+                                <rect key="frame" x="63" y="238" width="288" height="408"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="298" id="A09-DF-fqd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nyb-Jk-TNu" firstAttribute="top" secondItem="ls5-HH-wtQ" secondAttribute="bottom" constant="30" id="7Bg-gj-eyQ"/>
+                            <constraint firstItem="nyb-Jk-TNu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="238" id="AHa-t9-RYj"/>
+                            <constraint firstItem="wX6-e7-jdf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="154" id="SZC-bz-pO6"/>
+                            <constraint firstItem="nyb-Jk-TNu" firstAttribute="leading" secondItem="ls5-HH-wtQ" secondAttribute="leading" id="U88-tj-Npa"/>
+                            <constraint firstItem="wX6-e7-jdf" firstAttribute="top" secondItem="nyb-Jk-TNu" secondAttribute="bottom" constant="8" id="VrK-Ig-b2X"/>
+                            <constraint firstItem="nyb-Jk-TNu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="af0-zR-2aS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wX6-e7-jdf" secondAttribute="bottom" constant="89" id="bKp-FT-akV"/>
+                            <constraint firstItem="wX6-e7-jdf" firstAttribute="centerX" secondItem="nyb-Jk-TNu" secondAttribute="centerX" id="chS-1x-YRi"/>
+                            <constraint firstItem="nyb-Jk-TNu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pee-RP-za9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="locationInfoLabel" destination="nyb-Jk-TNu" id="k2e-ok-ef1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
